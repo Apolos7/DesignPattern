@@ -1,20 +1,17 @@
 package designpatterns.observer;
 
-import designpatterns.observer.editor.Editor;
-import designpatterns.observer.listeners.EmailNotificationListener;
-import designpatterns.observer.listeners.LogOpenListener;
+import designpatterns.observer.observers.EmailNotificationListener;
+import designpatterns.observer.observers.SmsListener;
+import designpatterns.observer.stockController.productStock;
 
 public class Main {
     public static void main(String[] args) {
-        Editor editor = new Editor();
-        editor.events.subscribe("open", new LogOpenListener("C:\\Windows\\Temp\\file.txt"));
-        editor.events.subscribe("save", new EmailNotificationListener("admin@example.com"));
+        productStock lojinhaDoJoao = new productStock();
+        lojinhaDoJoao.events.subscribe(new SmsListener(99998888));
+        lojinhaDoJoao.events.subscribe(new EmailNotificationListener("kgb@example.com"));
+        lojinhaDoJoao.events.subscribe(new EmailNotificationListener("aless@example.com"));
 
-        try {
-            editor.openFile("test.txt");
-            editor.saveFile();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        lojinhaDoJoao.addProduct("TV 50\" UHD Samsung 4k 50AU7700");
+
     }
 }
