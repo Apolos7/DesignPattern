@@ -1,4 +1,4 @@
-package avaliacao.logs.adapter;
+package avaliacoes.avaliacao01.logs.adapter;
 
 public interface Log {
     

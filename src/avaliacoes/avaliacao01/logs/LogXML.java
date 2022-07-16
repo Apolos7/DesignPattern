@@ -1,4 +1,4 @@
-package avaliacao.logs;
+package avaliacoes.avaliacao01.logs;
 
 public class LogXML {
 

@@ -1,6 +1,6 @@
-package avaliacao.logs.adapter;
+package avaliacoes.avaliacao01.logs.adapter;
 
-import avaliacao.logs.LogXML;
+import avaliacoes.avaliacao01.logs.LogXML;
 
 public class LogXMLAdapter extends LogXML implements Log {
 

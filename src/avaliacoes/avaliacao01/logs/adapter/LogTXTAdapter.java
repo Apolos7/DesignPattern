@@ -1,6 +1,6 @@
-package avaliacao.logs.adapter;
+package avaliacoes.avaliacao01.logs.adapter;
 
-import avaliacao.logs.LogTXT;
+import avaliacoes.avaliacao01.logs.LogTXT;
 
 public class LogTXTAdapter extends LogTXT implements Log {
 
