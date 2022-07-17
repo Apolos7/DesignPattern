@@ -1,26 +1,33 @@
 package designpatterns.observer.subject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import designpatterns.observer.observers.Observer;
 
 public class Subject {
-    ArrayList<Observer> inscritos = new ArrayList<>();
+    //ArrayList<Observer> inscritos = new ArrayList<>();
+    Map<String, List<Observer>> inscritos = new HashMap<>();
 
     public Subject() {
     }
 
-    public void inscrever(Observer inscrito) {
-        inscritos.add(inscrito);
+    public void inscrever(String produto, Observer inscrito) {
+        List<Observer> users = inscritos.get(produto);
+        users.add(inscrito);
     }
 
-    public void desinscrever(Observer inscrito) {
-        inscritos.remove(inscrito);
+    public void desinscrever(String produto, Observer inscrito) {
+        List<Observer> users = inscritos.get(produto);
+        users.remove(inscrito);
     }
 
-    public void notificar(String situacao, String produto) {
-        for (Observer inscrito : inscritos) {
-            inscrito.atualizar(situacao, produto);
+    public void notificar(String produto, String situacao) {
+        List<Observer> users = inscritos.get(produto);
+        for (Observer inscrito : users) {
+            inscrito.atualizar(produto, situacao);
         }
     }
 }
