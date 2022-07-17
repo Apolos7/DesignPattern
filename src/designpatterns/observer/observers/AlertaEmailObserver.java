@@ -8,7 +8,7 @@ public class AlertaEmailObserver implements Observer {
     }
 
     @Override
-    public void update(String tipoEvento, String produto) {
-        System.out.println("Email para " + email + " O produto " + produto + " que você queria agora está: " + tipoEvento);
+    public void atualizar(String tipoEvento, String produto) {
+        System.out.println("Email para: " + email + "\n O produto (" + produto + ") que você queria agora está " + tipoEvento);
     }
 }

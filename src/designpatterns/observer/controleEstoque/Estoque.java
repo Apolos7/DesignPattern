@@ -15,11 +15,11 @@ public class Estoque {
 
     public void adicionarProduto(String produto) {
         produtos.add(produto);
-        eventos.notify("em estoque", produto);
+        eventos.notificar("EM ESTOQUE", produto);
     }
 
     public void removerProduto(String produto) {
         produtos.remove(produto);
-        eventos.notify("fora de esqueto", produto);
+        eventos.notificar("EM FALTA", produto);
     }
 }

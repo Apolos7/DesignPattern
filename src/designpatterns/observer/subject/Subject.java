@@ -1,27 +1,26 @@
 package designpatterns.observer.subject;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.ArrayList;
 
 import designpatterns.observer.observers.Observer;
 
 public class Subject {
-    List<Observer> listeners = new LinkedList<>();
+    ArrayList<Observer> inscritos = new ArrayList<>();
 
     public Subject() {
     }
 
-    public void inscrever(Observer listener) {
-        listeners.add(listener);
+    public void inscrever(Observer inscrito) {
+        inscritos.add(inscrito);
     }
 
-    public void unsubscribe(Observer listener) {
-        listeners.remove(listener);
+    public void desinscrever(Observer inscrito) {
+        inscritos.remove(inscrito);
     }
 
-    public void notify(String eventType, String product) {
-        for (Observer listener : listeners) {
-            listener.update(eventType, product);
+    public void notificar(String situacao, String produto) {
+        for (Observer inscrito : inscritos) {
+            inscrito.atualizar(situacao, produto);
         }
     }
 }
