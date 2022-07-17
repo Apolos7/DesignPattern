@@ -1,25 +1,25 @@
 package designpatterns.observer.controleEstoque;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import designpatterns.observer.subject.Subject;
 
 public class Estoque {
-    private ArrayList<String> produtos;
+    Map<String, String> produtos = new HashMap<>();
     public Subject eventos;
 
     public Estoque() {
         eventos = new Subject();
-        produtos = new ArrayList<>();
     }
 
-    public void adicionarProduto(String produto) {
-        produtos.add(produto);
-        eventos.notificar("EM ESTOQUE", produto);
+    public void adicionarProduto(String produto, String situacao) {
+        produtos.put(produto, situacao);
+        eventos.notificar(produto, situacao);
     }
 
-    public void removerProduto(String produto) {
-        produtos.remove(produto);
-        eventos.notificar("EM FALTA", produto);
+    public void atualizarEstoque(String produto, String situacao) {
+        produtos.replace(produto, situacao);
+        eventos.notificar(produto, situacao);
     }
 }

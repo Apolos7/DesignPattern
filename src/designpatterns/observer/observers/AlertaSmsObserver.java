@@ -8,7 +8,7 @@ public class AlertaSmsObserver implements Observer {
     }
 
     @Override
-    public void atualizar(String tipoEvento, String produto) {
+    public void atualizar(String produto , String tipoEvento) {
         System.out.println("SMS para: " + numeroTelefone + "\n O produto (" + produto + ") que você queria agora está " + tipoEvento);
     }
 }

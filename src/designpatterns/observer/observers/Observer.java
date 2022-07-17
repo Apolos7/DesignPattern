@@ -2,5 +2,5 @@ package designpatterns.observer.observers;
 
 
 public interface Observer {
-    void atualizar(String tipoEvento, String produto);
+    void atualizar(String produto, String situacao);
 }
