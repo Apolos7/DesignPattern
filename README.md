@@ -1,11 +1,15 @@
 # Reposiório de Design Patterns
-Repositório criado com o intuito de conter atividades e exemplos de implementação dos padrões de projeto.
+Bem vindo ao meu repositório de padrões de projeto, aqui você irá encontrar diversas implementações de padrões de projeto. Esse é um repositório de estudo, dessa forma, sinta-se à vontade para contruibuir.
 
-## Estrutura do código fonte
+## Estrutura do projeto
 
 - `src`: Contem todo o código fonte.
-  - `atividades`: Contem todas as atividades que foram passadas durante a disciplina de padrões de projetos.
-  - `designpatterns`: possui um exemplo de implementação dos padrões utilizados em aula.
+  - `atividades`: Contem diversas atividades que foram implementadas utilizando os padrões estudados.
+  - `designpatterns`: possui exemplos de implementações de todos os padrões que foram estudados.
+
+## Colaboradores
+
+[🌟 Kamillegb03](https://github.com/kamillegb03)
 
 ## Links úteis
 
